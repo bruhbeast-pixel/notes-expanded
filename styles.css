@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: 'Noto Sans', Arial, sans-serif;
+    background: linear-gradient(to bottom, #333333, #222222);
+    color: white;
+    animation: changeGradient 30s linear infinite alternate;
+}
+
+@keyframes changeGradient {
+    0% {
+        background: linear-gradient(to bottom, #333333, #222222);
+    }
+    100% {
+        background: linear-gradient(to bottom, #222222, #333333);
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: calc(100vh - 120px);
+    padding: 20px;
+    position: relative;
+}
+
+#notepad-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.note {
+    position: absolute;
+    padding: 10px;
+    background-color: yellow;
+    color: black;
+    border-radius: 10px;
+    cursor: move;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.note .note-content {
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+.note .color-picker {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    margin-top: 10px;
+}
+
+#trash-can {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#trash-can img {
+    width: 100%;
+    height: 100%;
+}
+
+#input-container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
